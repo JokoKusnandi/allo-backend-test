@@ -3,7 +3,7 @@ package com.allobank.allobackendtest;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.allobank.allobackendtest", "com.allobank.allobackendtest.repository"})
 public class AlloBackendTestApplication {
 
 	public static void main(String[] args) {

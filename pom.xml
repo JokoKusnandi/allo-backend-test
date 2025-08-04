@@ -30,14 +30,59 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+	        <exclusions>
+	            <!-- Exclude JUnit 4 to avoid conflict -->
+	            <exclusion>
+	                <groupId>junit</groupId>
+	                <artifactId>junit</artifactId>
+            </exclusion>
+        	</exclusions>
 		</dependency>
+		
+		  <!-- Optional: Explicit JUnit Jupiter API (if needed separately) -->
+	    <dependency>
+	        <groupId>org.junit.jupiter</groupId>
+	        <artifactId>junit-jupiter-api</artifactId>
+	        <version>5.9.3</version>
+	        <scope>test</scope>
+	    </dependency>
+	
+	    <!-- Optional: Mockito Core (already included in starter, but can be added for clarity) -->
+	    <dependency>
+	        <groupId>org.mockito</groupId>
+	        <artifactId>mockito-core</artifactId>
+	        <version>5.10.0</version>
+	        <scope>test</scope>
+	    </dependency>
+	
+	    <!-- Optional: Mockito JUnit Jupiter Extension -->
+	    <dependency>
+	        <groupId>org.mockito</groupId>
+	        <artifactId>mockito-junit-jupiter</artifactId>
+	        <version>5.10.0</version>
+	        <scope>test</scope>
+	    </dependency>
+	
+	    <!-- Optional: JSON Path for response assertions -->
+	    <dependency>
+	        <groupId>com.jayway.jsonpath</groupId>
+	        <artifactId>json-path</artifactId>
+	        <scope>test</scope>
+	    </dependency>
 
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.30</version>
+			 <!-- <version>1.18.30</version>-->
 			<scope>provided</scope>
 		</dependency>
+		<dependency>
+		    <groupId>org.postgresql</groupId>
+		    <artifactId>postgresql</artifactId>
+		  <!--  <version>42.7.3</version>--> <!-- adjust version as needed -->
+		</dependency>
+
+
 	</dependencies>
 
 	<build>
